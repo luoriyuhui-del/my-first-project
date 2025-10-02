@@ -1,0 +1,79 @@
+# 编译输出目录（Java 字节码文件、打包产物等）
+target/          # Maven 项目编译输出
+build/           # Gradle 项目编译输出
+bin/             # 普通 Java 项目（如 Eclipse 生成的编译目录）
+out/             # IntelliJ IDEA 编译输出目录
+*.class          # 单个 .class 文件（如果未使用构建工具）
+*.jar            # 打包的 JAR 文件（除非是项目必须的依赖，否则忽略）
+*.war            # WAR 包（同上）
+*.ear            # EAR 包（同上）
+
+
+# IDE 配置文件（避免多人协作时 IDE 配置冲突）
+# IntelliJ IDEA
+.idea/           # IDEA 项目配置目录
+*.iml            # IDEA 模块文件
+*.iws            # IDEA 工作区文件
+*.ipr            # IDEA 项目文件
+out/             # IDEA 编译输出（部分版本可能生成在此）
+
+# Eclipse
+.classpath       # Eclipse 类路径配置
+.project         # Eclipse 项目配置
+.settings/       # Eclipse 设置目录
+
+# VS Code（Java 插件相关）
+.vscode/         # VS Code 配置目录（包含 launch.json、settings.json 等）
+*.code-workspace # VS Code 工作区文件
+
+# NetBeans
+nbproject/       # NetBeans 项目配置
+dist/            # NetBeans 编译输出
+
+
+# 构建工具相关文件（本地缓存、临时文件）
+# Maven
+.m2/             # Maven 本地仓库缓存（通常在用户目录，但如果项目内有则忽略）
+pom.xml.tag      # Maven 版本控制临时文件
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+
+# Gradle
+.gradle/         # Gradle 缓存目录
+gradle/          # Gradle 包装器（如果已提交 gradlew 和 gradlew.bat，可保留此目录）
+!gradle/wrapper/ # 保留 wrapper 目录（方便他人无需安装 Gradle 即可构建）
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+build/           # Gradle 编译输出（已在上方列出，此处重复是为了强调）
+*.gradle        # 单个 Gradle 构建文件（通常无需忽略，除非有本地修改）
+
+
+# 操作系统相关文件（跨平台兼容）
+.DS_Store        # MacOS 系统生成的隐藏文件
+Thumbs.db        # Windows 系统生成的缩略图缓存
+desktop.ini      # Windows 系统文件夹配置文件
+
+
+# 日志和临时文件
+logs/            # 日志目录
+*.log            # 日志文件
+*.tmp            # 临时文件
+*.bak            # 备份文件
+*.swp            # Vim 编辑器临时文件
+*.swo            # Vim 编辑器临时文件
+
+
+# 本地环境配置文件（包含敏感信息或本地路径）
+.env             # 环境变量配置（如数据库密码、API 密钥等）
+.env.local       # 本地环境配置
+*.properties     # 如果 properties 文件包含本地配置（如数据库连接），可添加此行
+# 注意：如果 properties 文件是项目通用配置（如 log4j.properties），则不要忽略！
+
+
+# 其他可能不需要的文件
+*.log.*          # 滚动日志文件（如 app.log.2024-01-01）
+*.gz             # 压缩文件
+*.zip            # 压缩文件
+*.tar            # 压缩文件
+*.tar.gz         # 压缩文件
