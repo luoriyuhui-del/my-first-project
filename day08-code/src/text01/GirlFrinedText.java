@@ -14,5 +14,17 @@ public class GirlFrinedText {
         gf.playGame();
         gf.call();
 
+        System.out.println("--------------------------------------");
+
+        GirlFrined gf2 = new GirlFrined();
+        gf2.setName("桃乃木香奈");
+        gf2.setAge(18);
+        gf2.setHeight(1.58);
+        System.out.println(gf2.getName());
+        System.out.println(gf2.getAge());
+        System.out.println(gf2.getHeight());
+        gf2.number();
+        gf2.playGame();
+        gf2.call();
     }
 }
