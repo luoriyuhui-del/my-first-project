@@ -1,16 +1,17 @@
-package text07;
+package com.itheima.a05interfacedemo5;
 
-public class Student {
+public abstract class Person {
+    //被abstract修饰的类 , 无法创建对象 --- 实例化
+
+    //父类Person
     private String name;
     private int age;
-    private int id;
-    public Student(String name,int age,int id){
+
+    public Person() {
+    }
+    public Person(String name, int age) {
         this.name = name;
         this.age = age;
-        this.id = id;
-    }
-
-    public Student() {
     }
 
     public String getName() {
@@ -28,13 +29,4 @@ public class Student {
     public void setAge(int age) {
         this.age = age;
     }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
 }

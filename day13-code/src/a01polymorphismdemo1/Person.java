@@ -1,16 +1,15 @@
-package text07;
+package a01polymorphismdemo1;
 
-public class Student {
+public class Person {
+    //将学生 教师 管理员 封装成抽象类 --- 使用多态
     private String name;
     private int age;
-    private int id;
-    public Student(String name,int age,int id){
+
+    public Person() {}
+
+    public Person(String name, int age) {
         this.name = name;
         this.age = age;
-        this.id = id;
-    }
-
-    public Student() {
     }
 
     public String getName() {
@@ -29,12 +28,7 @@ public class Student {
         this.age = age;
     }
 
-    public int getId() {
-        return id;
+    public void show() {
+        System.out.println("姓名：" + name + " 年龄：" + age);
     }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
 }

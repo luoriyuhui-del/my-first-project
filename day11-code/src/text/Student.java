@@ -1,16 +1,14 @@
-package text07;
+package text;
 
 public class Student {
     private String name;
     private int age;
-    private int id;
-    public Student(String name,int age,int id){
-        this.name = name;
-        this.age = age;
-        this.id = id;
-    }
 
     public Student() {
+    }
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
     public String getName() {
@@ -28,13 +26,4 @@ public class Student {
     public void setAge(int age) {
         this.age = age;
     }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
 }

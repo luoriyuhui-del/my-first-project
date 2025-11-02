@@ -1,15 +1,17 @@
-package text07;
+package a03staticdemo3;
 
 public class Student {
+    // ---------------------------- javabean类 ----------------------------
+
     private String name;
     private int age;
-    private int id;
-    public Student(String name,int age,int id){
+    private char gender;
+
+    public Student(String name, int age, char gender) {
         this.name = name;
         this.age = age;
-        this.id = id;
+        this.gender = gender;
     }
-
     public Student() {
     }
 
@@ -29,12 +31,11 @@ public class Student {
         this.age = age;
     }
 
-    public int getId() {
-        return id;
+    public char getGender() {
+        return gender;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setGender(char gender) {
+        this.gender = gender;
     }
-
 }

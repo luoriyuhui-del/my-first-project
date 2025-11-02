@@ -1,13 +1,13 @@
-package text07;
+package a05polymorphismdemo5;
 
 public class Student {
     private String name;
     private int age;
-    private int id;
-    public Student(String name,int age,int id){
+    private int score;
+    public Student(String name, int age, int score) {
         this.name = name;
         this.age = age;
-        this.id = id;
+        this.score = score;
     }
 
     public Student() {
@@ -29,12 +29,11 @@ public class Student {
         this.age = age;
     }
 
-    public int getId() {
-        return id;
+    public int getScore() {
+        return score;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setScore(int score) {
+        this.score = score;
     }
-
 }
